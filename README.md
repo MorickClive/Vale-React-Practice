@@ -4,11 +4,17 @@ The objective of this project is to create a javascript front-end application th
 
 The project will also use the SpringBoot Java-based framework to provide a hosted server for both front-end and back-end operations. Forming the basis for a rudimentary fullstack application.
 
-This project will also incorperate the elements provided in Vale-Javascript-Practice as a foundational state to build from, this will include the adaptation of JS code features such as the console and calculator examples.
+This project will also incorporate the elements provided in Vale-Javascript-Practice as a foundational state to build from, this will include the adaptation of JS code features such as the console and calculator examples.
 
 Review commit tree here: [commit tree](https://github.com/MorickClive/Vale-React-Practice/network)
 
-Objective List:
+### Site Preview:
+
+
+  ![Site Preview](./src/resources/css/img/example%20page.jpg)
+
+
+## Objective List:
 
 - [ ] React
   - [ ] Fundamentals
