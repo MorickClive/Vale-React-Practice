@@ -6,6 +6,8 @@ The project will also use the SpringBoot Java-based framework to provide a hoste
 
 This project will also incorperate the elements provided in Vale-Javascript-Practice as a foundational state to build from, this will include the adaptation of JS code features such as the console and calculator examples.
 
+![plot](./src/resources/css/img/example%20page.jpg)
+
 Review commit tree here: [commit tree](https://github.com/MorickClive/Vale-React-Practice/network)
 
 Objective List:
