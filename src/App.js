@@ -1,4 +1,3 @@
-import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./pages/menu";
 import Home from "./pages/main/home";
@@ -11,8 +10,8 @@ import JSBasic from "./pages/main/jsfundamentals";
 import NoteTracker from "./pages/main/notetracker";
 
 function App() {
-  document.title = "Vale-React-Project";
-	
+  //document.title = "Vale-React-Project";
+
   return (
     <div className="App">
 		<div id="nav">

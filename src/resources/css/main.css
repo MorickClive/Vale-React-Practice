@@ -17,7 +17,7 @@ NAV EXAMPLE
 }
 
 #nav {
-	background-color: rgb(255, 255, 255);
+	background-color: #7d7d7d;
 	width: 100vw;
 	height: 60px;
 	display: flex;
@@ -40,6 +40,7 @@ NAV EXAMPLE
 #nav h1 {
 	z-index: 1;
 	text-align: center;
+	color: whitesmoke;
 }
 
 #menu {
@@ -83,21 +84,35 @@ BODY CSS
 */
 
 body {
-	background-color: whitesmoke;
+	color: #bcbcbc;
+	background-color: #121212;
 }
 
 #mainBody {
     padding: 25px 50px;
     min-height: 60vh;
-    margin: 50px 150px;
+    min-width: 30vh;
+    margin: 50px 550px;
     border-style: outset;
     border-color: #00000017;
-    background-color: #ffffff;
+    background-color: #333;
+}
+
+#mainBody * {
+    margin-bottom: 8px;
 }
 
 .interactiveHeader {
 	text-align:center;
 	margin-top: 5vh;
+}
+
+.pagedivide {
+    border-top: white;
+    border-style: outset;
+    width: 25vw;
+    margin: 10px 0px;
+	margin-left: 5px;
 }
 
 /* 
@@ -124,7 +139,7 @@ CONSOLE
 ========================================
 */
 #console {
-	background-color: bisque;
+	background-color: #333;
 	border-style: solid;
     margin: 15px auto;
 	width: 65vw;
@@ -145,7 +160,7 @@ CONSOLE
 	height: inherit;
 	overflow-y: auto;
 	overflow-x: hidden;
-	background-color: whitesmoke;
+	background-color: #777;
 }
 
 #console .window * {
@@ -153,11 +168,11 @@ CONSOLE
 	margin-bottom: 5px;
 	border-width: 0px 0px 0px 2px;
 	padding-left: 10px;
+	color: white;
 }
 
 #console .UI {
 	display: flex;
-	background-color: bisque;
 	border-top: 3px solid #000000;
 	padding: 5px;
 }
@@ -165,6 +180,8 @@ CONSOLE
 #consoleInput {
 	padding: 5px;
 	width: -webkit-fill-available;
+	color: #ddd;
+	background-color: #222;
 }
 
 #submitConsole {

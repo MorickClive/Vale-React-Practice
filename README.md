@@ -18,15 +18,15 @@ Review commit tree here: [commit tree](https://github.com/MorickClive/Vale-React
 
 - [ ] React
   - [ ] Fundamentals
-    - [ ] Render
-    - [ ] JSX
-    - [ ] Components
+    - [X] Render
+    - [X] JSX
+    - [X] Components
     - [ ] Classes
     - [ ] Events
-    - [ ] List.key
+    - [X] List.key
     - [ ] Forms
     - [X] UIRouter
-    - [ ] Inline-CSS
+    - [X] Inline-CSS
   - [ ] Hooks
     - [ ] useState
     - [ ] useEvent
@@ -53,4 +53,8 @@ Task: NoteTracker CRUD
   - [ ] DELETE
  
  Task: Console & Calculator functionality
- - [ ] Intergrate Console & Calculator features.
+ - [ ] Integrate Console & Calculator features.
+
+---
+
+## [Project Vale: Overview](https://github.com/MorickClive/Project-Vale/blob/main/README.md#project-vale)
