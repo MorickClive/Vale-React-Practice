@@ -4,7 +4,6 @@ import Home from "./pages/main/home";
 import Console from "./pages/main/console";
 import Calculator from "./pages/main/calculator";
 import Error404 from "./pages/error/errorNotFound";
-import './resources/css/main.css';
 import Register from "./pages/main/register";
 import JSBasic from "./pages/main/jsfundamentals";
 import NoteTracker from "./pages/main/notetracker";
@@ -13,12 +12,7 @@ function App() {
   //document.title = "Vale-React-Project";
 
   return (
-    <div className="App">
-		<div id="nav">
-			<div className="headerImage"></div>
-			<h1>Vale-React-Project</h1>
-		</div>
-		
+    <div className="App">		
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Menu />}>
@@ -33,8 +27,7 @@ function App() {
 				</Route>
 			</Routes>
 		</BrowserRouter>
-		
-    </div>
+	</div>
   );
 }
 

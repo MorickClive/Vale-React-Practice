@@ -1,7 +1,9 @@
 import { useState } from "react";
-import renderExample from "../../renderExample";
-import exampleComp from "../../components/exampleComponent";
-import TaskList from "../../components/TaskList";
+import renderExample from "../../components/fundamentals/renderExample";
+import exampleComp from "../../components/fundamentals/exampleComponent";
+import TaskList from "../../components/fundamentals/models/TaskList";
+import Clock from "../../components/fundamentals/Clock";
+import NameForm from "../../components/fundamentals/NameForm";
 
 const Home = () => {
 	// React Render
@@ -22,8 +24,13 @@ const Home = () => {
 		},
 		{
 			id: 1,
-			label: 'new item',
-			message: 'new message'
+			label: 'Example Item',
+			message: 'Example message'
+		},
+		{
+			id: 2,
+			label: 'Example Item',
+			message: 'Example message'
 		}
 	]);
 
@@ -33,7 +40,6 @@ const Home = () => {
 
 	/* 
 		TASK LIST:
-			- Classes
 			- Forms
 	*/
 
@@ -44,36 +50,37 @@ const Home = () => {
 
 			<h3>Example Component:</h3>
 			<>{exampleComponent}</>
-			<div className="pagedivide" />
+			<div className="pagediv" />
 			<br />
 
 			<h3>Example Events:</h3>
 			<p>The button below has an event attached to its onClick listener!</p>
 			<input className="btn" type="button" value="Event Trigger" onClick={alertBtn}/>
-			<div className="pagedivide" />
+			<div className="pagediv" />
 			<br />
 
 			<h3>List.key Example:</h3>
 			<TaskList tasks={tasks} />
-			<div className="pagedivide" />
+			<div className="pagediv" />
 			<br />
 			
 			<h3>List.key Example:</h3>
 			<div style={ { 
+				"paddingLeft" : "25px",
 				"fontWeight" : "bold",
 				"color" : "green"} }>
-				Example Inline-CSS</div>
-			<div className="pagedivide" />
+				- Example Inline-CSS</div>
+			<div className="pagediv" />
 			<br />
 
 			<h3>Example Class:</h3>
-			<p>Pending content</p>
-			<div className="pagedivide" />
+			<Clock />
+			<div className="pagediv" />
 			<br />
 
 			<h3>Example Forms:</h3>
-			<p>Pending content</p>
-			<div className="pagedivide" />
+			<div className="pagediv" />
+			<NameForm />
 			<br />
 		</div>;
 };

@@ -17,14 +17,14 @@ Review commit tree here: [commit tree](https://github.com/MorickClive/Vale-React
 ## Objective List:
 
 - [ ] React
-  - [ ] Fundamentals
+  - [X] Fundamentals
     - [X] Render
     - [X] JSX
     - [X] Components
-    - [ ] Classes
-    - [ ] Events
+    - [X] Classes
+    - [X] Events
     - [X] List.key
-    - [ ] Forms
+    - [XX] Forms
     - [X] UIRouter
     - [X] Inline-CSS
   - [ ] Hooks
