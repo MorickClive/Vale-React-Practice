@@ -1,6 +1,44 @@
 const JSBasic = () => {
-	return <div id="mainBody">
-			<h2>Javascript Fundamentals page</h2>
+	return <div id="main">
+			<div className="container">
+				<h2>Javascript Fundamentals page</h2>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+				<br />
+				<p>Example text</p>
+			</div>
 		</div>
 };
 

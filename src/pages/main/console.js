@@ -29,16 +29,20 @@ const Console = () => {
 	};
 
 	return (<>
-			<h2 className="interactiveHeader">Console</h2>
-			<div id="console">
-				<div className="window" ref={displayWindow}>
-				<p>{message}</p>
-				</div>
-				<div className="UI">
-					<input id="submitConsole" type="button" value="Submit" ref={submit}/>
-					<input id="consoleInput" type="text" ref={input} />
-				</div>
+		<div id="main">
+			<div className="container">
+					<h2 className="interactiveHeader">Console</h2>
+					<div id="console">
+						<div className="window" ref={displayWindow}>
+						<p>{message}</p>
+						</div>
+						<div className="UI">
+							<input id="submitConsole" type="button" value="Submit" ref={submit}/>
+							<input id="consoleInput" type="text" ref={input} />
+						</div>
+					</div>
 			</div>
+		</div>
 	</>
 	);
 };

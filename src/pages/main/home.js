@@ -43,45 +43,46 @@ const Home = () => {
 			- Forms
 	*/
 
-	return <div id="mainBody">
-			<h1>{message}</h1>
-			{<p>This message is generated through inline Javascript XML!</p>}
-			<br/>
+	return <div id="main">
+			<div className="container">
+				<h1>{message}</h1>
+				{<p>This message is generated through inline Javascript XML!</p>}
+			</div>		
 
-			<h3>Example Component:</h3>
-			<>{exampleComponent}</>
-			<div className="pagediv" />
-			<br />
-
-			<h3>Example Events:</h3>
-			<p>The button below has an event attached to its onClick listener!</p>
-			<input className="btn" type="button" value="Event Trigger" onClick={alertBtn}/>
-			<div className="pagediv" />
-			<br />
-
-			<h3>List.key Example:</h3>
-			<TaskList tasks={tasks} />
-			<div className="pagediv" />
-			<br />
+			<div className="container">
+				<h3>Example Component:</h3>
+				<>{exampleComponent}</>
+			</div>
 			
-			<h3>List.key Example:</h3>
-			<div style={ { 
-				"paddingLeft" : "25px",
-				"fontWeight" : "bold",
-				"color" : "green"} }>
-				- Example Inline-CSS</div>
-			<div className="pagediv" />
-			<br />
+			<div className="container">
+				<h3>Example Events:</h3>
+				<p>The button below has an event attached to its onClick listener!</p>
+				<input className="btn" type="button" value="Event Trigger" onClick={alertBtn}/>
+			</div>
 
-			<h3>Example Class:</h3>
-			<Clock />
-			<div className="pagediv" />
-			<br />
+			<div className="container">
+				<h3>List.key Example:</h3>
+				<TaskList tasks={tasks} />
+			</div>
+			
+			<div className="container">		
+				<h3>Inline-CSS Example:</h3>
+				<div style={ { 
+					"paddingLeft" : "25px",
+					"fontWeight" : "bold",
+					"color" : "green"} }>
+					- Example Inline-CSS</div>
+			</div>
 
-			<h3>Example Forms:</h3>
-			<div className="pagediv" />
-			<NameForm />
-			<br />
+			<div className="container">
+				<h3>Example Class:</h3>
+				<Clock />
+			</div>
+
+			<div className="container">
+				<h3>Example Forms:</h3>
+				<NameForm />
+			</div>
 		</div>;
 };
 
