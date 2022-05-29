@@ -24,7 +24,7 @@ Review commit tree here: [commit tree](https://github.com/MorickClive/Vale-React
     - [X] Classes
     - [X] Events
     - [X] List.key
-    - [XX] Forms
+    - [X] Forms
     - [X] UIRouter
     - [X] Inline-CSS
   - [ ] Hooks
