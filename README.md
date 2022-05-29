@@ -54,7 +54,7 @@ Task: NoteTracker CRUD
  
  Task: Console & Calculator functionality
  - [ ] Integrate Console
- - [X} Integrate Calculator
+ - [X] Integrate Calculator
 
 ---
 
