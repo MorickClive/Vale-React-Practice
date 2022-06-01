@@ -7,6 +7,7 @@ import Error404 from "./pages/error/errorNotFound";
 import Register from "./pages/main/register";
 import JSBasic from "./pages/main/jsfundamentals";
 import NoteTracker from "./pages/main/notetracker";
+import ReactPractice from "./pages/main/reactpractice";
 
 function App() {
   //document.title = "Vale-React-Project";
@@ -18,6 +19,7 @@ function App() {
 				<Route path="/" element={<Menu />}>
 				<Route index element={<Home />} />
 				<Route path="home" element={<Home />} />
+				<Route path="reactpractice" element={<ReactPractice />} />
 				<Route path="register" element={<Register />} />
 				<Route path="notetracker" element={<NoteTracker />} />
 				<Route path="javascript-basics" element={<JSBasic />} />

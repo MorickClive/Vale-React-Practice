@@ -15,7 +15,7 @@ const Menu = () => {
 		<div id="menu">
 			<Link to="/Home">		
 				<input type="button" className="item" value="Home" onClick={click}/></Link>
-			<Link to="/Home">		
+			<Link to="/ReactPractice">		
 				<input type="button" className="item" value="React Examples" onClick={click}/></Link>
 			<Link to="/Register">
 				<input type="button" className="item" value="Person Register" onClick={click}/></Link>
