@@ -8,8 +8,12 @@ const Console = () => {
 	}, []);
 
 	const [input, setInput] = useState('');
-	const [display, setDisplay] = useState( [ {id: 0, msg : "Hello World!"}, {id: 1, msg : "Hello World!"} ] );
+	const [display, setDisplay] = useState( [ {id: 0, msg : "Hello World!"} ] );
 	const displayRef = React.createRef();
+
+	// ========================================
+	// Console Functions:
+	// ========================================
 
 	const listCommands = () => {
 		let commandList = new Map();
@@ -25,7 +29,7 @@ const Console = () => {
 		msg = <><p>{"=".repeat(40)}</p> <h3>[CONSOLE: Command List]:</h3> <p>{"=".repeat(40)}</p>{msg}</>;
 		
 		const list = [{id: display.length, msg: msg}];
-		addEntries(list);
+		addToDisplay(list);
 	}
 
 	const checkCommands = (y) => {
@@ -46,7 +50,7 @@ const Console = () => {
 				break;
 				
 				default:
-					addEntries([{id: display.length, msg: "[Console:] Command: \"" + y + "\" not found!" }]);
+					addToDisplay([{id: display.length, msg: "[Console:] Command: \"" + y + "\" not found!" }]);
 			}
 			return true;
 		}
@@ -61,16 +65,20 @@ const Console = () => {
 		setInput("");
 	}
 
-	const addEntries = (list) => {
+	const addToDisplay = (list) => {
 		setDisplay([...display, ...list]);
 		displayRef.current.scrollTop = displayRef.current.scrollHeight;	
 	}
 
+	// ========================================
+	// Element Hooks:
+	// ========================================
+	
 	const handleSubmit = (event) => {
 		const entry = event.target.consoleInput.value;
 		if(checkCommands(entry) || (entry === null || entry === undefined || entry === "")){
 		} else {
-			addEntries([{id: display.length, msg: entry }]);
+			addToDisplay([{id: display.length, msg: entry }]);
 		}
 		clearInput();
 		event.preventDefault();
