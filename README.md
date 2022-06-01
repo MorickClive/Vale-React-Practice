@@ -28,15 +28,15 @@ Review commit tree here: [commit tree](https://github.com/MorickClive/Vale-React
     - [X] UIRouter
     - [X] Inline-CSS
   - [ ] Hooks
-    - [ ] useState
-    - [ ] useEvent
+    - [X] useState
+    - [X] useEvent
     - [ ] useContext
     - [ ] useRef
     - [ ] useCallback
     - [ ] useMemo
 
 Task: Person CRUD
-Create a react page that allows a full-stack communication of data between React, Spring and an SQL-based database.
+Create a React page that allows a full-stack communication of data between React, Spring and an SQL-based database.
 
 - [ ] Person Register System
   - [ ] CREATE
