@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 const Calculator = () => {
+	
+	useEffect(() => {	
+		document.title = "Vale-React-Project: Calculator";
+	}, []);
 
 	const [displayValue, setDisplay] = useState('0');
 	const [storedVal, setStoredVal] = useState(null);
@@ -49,8 +53,9 @@ const Calculator = () => {
 				return x / y;
 			case '%':
 				return x % y;
+			default:
+				return NaN;
 		}
-		return y;
 	}
 	
 	const handleOperator = (op) => {

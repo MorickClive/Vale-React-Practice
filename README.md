@@ -53,7 +53,7 @@ Task: NoteTracker CRUD
   - [ ] DELETE
  
  Task: Console & Calculator functionality
- - [ ] Integrate Console
+ - [X] Integrate Console
  - [X] Integrate Calculator
 
 ---

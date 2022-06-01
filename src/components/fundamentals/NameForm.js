@@ -23,7 +23,7 @@ class NameForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Name:
-            <input type="text" value={this.state.value} onChange={this.handleChange} style={{"margin-left":"25px"}} />
+            <input type="text" value={this.state.value} onChange={this.handleChange} style={{"marginLeft":"25px"}} />
           </label>
           <input type="submit" value="Submit" />
         </form>

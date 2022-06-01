@@ -118,7 +118,7 @@ code {
 }
 
 #main {
-    margin: 50px 28% 150px 28%;
+    margin: 150px 28% 150px 28%;
 }
 
 #main .container {
@@ -183,7 +183,7 @@ CONSOLE
 	background-color: bisque;
 	border-style: solid;
     margin: 15px auto;
-	width: 65%;
+	width: 95%;
 	height: 400px;
     vertical-align: top;
     display: flex;

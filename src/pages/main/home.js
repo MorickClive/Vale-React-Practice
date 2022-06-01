@@ -1,13 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import renderExample from "../../components/fundamentals/renderExample";
 import exampleComp from "../../components/fundamentals/exampleComponent";
 import TaskList from "../../components/fundamentals/models/TaskList";
 import Clock from "../../components/fundamentals/Clock";
 import NameForm from "../../components/fundamentals/NameForm";
+import Counter from "../../components/hooks/hookState";
+import HookExample from "../../components/hooks/hookEffect";
 
 const Home = () => {
-	// React Render
-	renderExample();
+	
+	useEffect(() => {
+		document.title = "Vale-React-Project: Examples";
+
+		// React Render
+		renderExample();
+	}, []);
+	
 
 	//jsx expressions
 	const message = "Hello World";
@@ -37,11 +45,6 @@ const Home = () => {
 	const alertBtn = () => {
 		alert("Message Trigger");	
 	};
-
-	/* 
-		TASK LIST:
-			- Forms
-	*/
 
 	return <div id="main">
 			<div className="container">
@@ -83,6 +86,17 @@ const Home = () => {
 				<h3>Example Forms:</h3>
 				<NameForm />
 			</div>
+
+			<div className="container">
+				<h3>State Hook Example - Counter:</h3>
+				<Counter />
+			</div>
+
+			<div className="container">
+				<h3>Effect Hook Example - Counter:</h3>
+				<HookExample />
+			</div>
+
 		</div>;
 };
 
