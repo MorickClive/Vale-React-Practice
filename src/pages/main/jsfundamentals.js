@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import HookContext from "../../components/hooks/hookContext";
 
 const JSBasic = () => {
 	
@@ -6,12 +7,13 @@ const JSBasic = () => {
 		document.title = "Vale-React-Project: Fundamentals";
 	}, []);
 	
+	const [context, setContext] = useContext(HookContext);
 
 	return <div id="main">
 			<div className="container">
 				<h2>Javascript Fundamentals page</h2>
 				<br />
-				<p>Example text</p>
+				<p>Context: [ {context} ]</p>
 				<br />
 				<p>Example text</p>
 				<br />

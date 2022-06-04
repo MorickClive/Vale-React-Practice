@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Display from "../../components/console/ConsoleDisplay";
+import HookContext from "../../components/hooks/hookContext";
 
 const Console = () => {
 
 	useEffect(() => {
 		document.title = "Vale-React-Project: Console";
 	}, []);
+	const [context, setContext] = useContext(HookContext);
 
 	const [input, setInput] = useState('');
-	const [display, setDisplay] = useState( [ {id: 0, msg : "Hello World!"} ] );
+	const [display, setDisplay] = useState( [ {id: 0, msg : <><p>Current Context: {context}</p><p>Hello World!</p></>} ] );
 	const displayRef = React.createRef();
 
 	// ========================================

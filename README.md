@@ -30,7 +30,7 @@ Review commit tree here: [commit tree](https://github.com/MorickClive/Vale-React
   - [ ] Hooks
     - [X] useState
     - [X] useEvent
-    - [ ] useContext
+    - [X] useContext
     - [ ] useRef
     - [ ] useCallback
     - [ ] useMemo

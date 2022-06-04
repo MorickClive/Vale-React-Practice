@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Menu from "./pages/menu";
 import Home from "./pages/main/home";
 import Console from "./pages/main/console";
@@ -8,12 +9,15 @@ import Register from "./pages/main/register";
 import JSBasic from "./pages/main/jsfundamentals";
 import NoteTracker from "./pages/main/notetracker";
 import ReactPractice from "./pages/main/reactpractice";
+import HookContext from "./components/hooks/hookContext";
 
 function App() {
-  //document.title = "Vale-React-Project";
+  const [value, setValue] = useState("Example Context");
 
   return (
-    <div className="App">		
+    <div className="App">	
+	
+	<HookContext.Provider value={[value, setValue]} >
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Menu />}>
@@ -29,6 +33,7 @@ function App() {
 				</Route>
 			</Routes>
 		</BrowserRouter>
+	</HookContext.Provider>
 	</div>
   );
 }

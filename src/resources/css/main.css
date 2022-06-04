@@ -183,9 +183,13 @@ CONSOLE
 	padding-top: 15px;
 	padding-left: 20px;
 	height: inherit;
-	overflow-y: auto;
+	overflow-y: hidden;
 	overflow-x: hidden;
 	background-color: whitesmoke;
+}
+
+#console .window:hover {
+	overflow-y: scroll;
 }
 
 #console .window * {
