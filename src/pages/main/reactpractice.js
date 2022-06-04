@@ -8,6 +8,7 @@ import Counter from "../../components/hooks/hookState";
 import HookExample from "../../components/hooks/hookEffect";
 import ContextForm from "../../components/hooks/ContextForm";
 import HookContext from "../../components/hooks/hookContext";
+import HookRef from "../../components/hooks/hookRef";
 
 const ReactPractice = () => {
 	
@@ -105,6 +106,11 @@ const ReactPractice = () => {
 				<h3>Context Hook Example:</h3>
 				<p>[ {contextMessage} ]</p>
 				<ContextForm />
+			</div>
+			
+			<div className="container">
+				<h3>Ref Hook Example:</h3>
+				<HookRef text="Button Upgraded!"/>
 			</div>
 
 		</div>;

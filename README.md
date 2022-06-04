@@ -31,7 +31,7 @@ Review commit tree here: [commit tree](https://github.com/MorickClive/Vale-React
     - [X] useState
     - [X] useEvent
     - [X] useContext
-    - [ ] useRef
+    - [X] useRef
     - [ ] useCallback
     - [ ] useMemo
 
