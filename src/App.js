@@ -1,30 +1,29 @@
-import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Menu from "./pages/menu";
 import Home from "./pages/main/home";
 import Console from "./pages/main/console";
 import Calculator from "./pages/main/calculator";
 import Error404 from "./pages/error/errorNotFound";
-import './resources/css/main.css';
 import Register from "./pages/main/register";
 import JSBasic from "./pages/main/jsfundamentals";
 import NoteTracker from "./pages/main/notetracker";
+import ReactPractice from "./pages/main/reactpractice";
+import HookContext from "./components/hooks/hookContext";
 
 function App() {
-  document.title = "Vale-React-Project";
-	
+  const [value, setValue] = useState("Example Context");
+
   return (
-    <div className="App">
-		<div id="nav">
-			<div className="headerImage"></div>
-			<h1>Vale-React-Project</h1>
-		</div>
-		
+    <div className="App">	
+	
+	<HookContext.Provider value={[value, setValue]} >
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Menu />}>
 				<Route index element={<Home />} />
 				<Route path="home" element={<Home />} />
+				<Route path="reactpractice" element={<ReactPractice />} />
 				<Route path="register" element={<Register />} />
 				<Route path="notetracker" element={<NoteTracker />} />
 				<Route path="javascript-basics" element={<JSBasic />} />
@@ -34,8 +33,8 @@ function App() {
 				</Route>
 			</Routes>
 		</BrowserRouter>
-		
-    </div>
+	</HookContext.Provider>
+	</div>
   );
 }
 

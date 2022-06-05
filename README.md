@@ -10,33 +10,32 @@ Review commit tree here: [commit tree](https://github.com/MorickClive/Vale-React
 
 ### Site Preview:
 
-
   ![Site Preview](./src/resources/css/img/example%20page.jpg)
 
 
 ## Objective List:
 
-- [ ] React
-  - [ ] Fundamentals
-    - [ ] Render
-    - [ ] JSX
-    - [ ] Components
-    - [ ] Classes
-    - [ ] Events
-    - [ ] List.key
-    - [ ] Forms
+- [X] React
+  - [X] Fundamentals
+    - [X] Render
+    - [X] JSX
+    - [X] Components
+    - [X] Classes
+    - [X] Events
+    - [X] List.key
+    - [X] Forms
     - [X] UIRouter
-    - [ ] Inline-CSS
-  - [ ] Hooks
-    - [ ] useState
-    - [ ] useEvent
-    - [ ] useContext
-    - [ ] useRef
-    - [ ] useCallback
-    - [ ] useMemo
+    - [X] Inline-CSS
+  - [X] Hooks
+    - [X] useState
+    - [X] useEvent
+    - [X] useContext
+    - [X] useRef
+    - [X] useCallback
+    - [X] useMemo
 
 Task: Person CRUD
-Create a react page that allows a full-stack communication of data between React, Spring and an SQL-based database.
+Create a React page that allows a full-stack communication of data between React, Spring and an SQL-based database.
 
 - [ ] Person Register System
   - [ ] CREATE
@@ -53,4 +52,9 @@ Task: NoteTracker CRUD
   - [ ] DELETE
  
  Task: Console & Calculator functionality
- - [ ] Intergrate Console & Calculator features.
+ - [X] Integrate Console
+ - [X] Integrate Calculator
+
+---
+
+## [Project Vale: Overview](https://github.com/MorickClive/Project-Vale/blob/main/README.md#project-vale)
