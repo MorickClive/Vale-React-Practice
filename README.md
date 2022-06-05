@@ -10,13 +10,12 @@ Review commit tree here: [commit tree](https://github.com/MorickClive/Vale-React
 
 ### Site Preview:
 
-
   ![Site Preview](./src/resources/css/img/example%20page.jpg)
 
 
 ## Objective List:
 
-- [ ] React
+- [X] React
   - [X] Fundamentals
     - [X] Render
     - [X] JSX
@@ -27,12 +26,12 @@ Review commit tree here: [commit tree](https://github.com/MorickClive/Vale-React
     - [X] Forms
     - [X] UIRouter
     - [X] Inline-CSS
-  - [ ] Hooks
+  - [X] Hooks
     - [X] useState
     - [X] useEvent
     - [X] useContext
     - [X] useRef
-    - [ ] useCallback
+    - [X] useCallback
     - [X] useMemo
 
 Task: Person CRUD
