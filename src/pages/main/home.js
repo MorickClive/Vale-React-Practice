@@ -1,33 +1,26 @@
-import exampleComp from "../../components/exampleComponent";
-import { useState } from "react";
-import TaskList from "../../components/TaskList";
+import { getValue } from "@testing-library/user-event/dist/utils";
+import { useContext, useEffect } from "react";
+import Clock from "../../components/fundamentals/Clock";
+import HookContext from "../../components/hooks/hookContext";
 
 const Home = () => {
-	//jsx expressions
-	const message = "Hello World";
+	
+	useEffect(() => {
+		document.title = "Vale-React-Project";
+	}, []);
 
-	const [tasks, setTaskList] = useState([
-		{
-			id: 1,
-			label: 'Example header',
-			message: 'Example message'
-		},
-		{
-			id: 2,
-			label: 'new item',
-			message: 'new message'
-		}
-	]);
+	const [value, setValue] = useContext(HookContext);
+	
+	return <div id="main">
+			<div className="container" style={{"height":"65vh"}} >
+				<h1>Welcome to Vale-React-Project!</h1>
+				<br />
+				<p>useContext: [{value}]</p>
+				<br />
+				<p>The current System time is:</p>
+				<Clock />
+			</div>		
 
-	const alertBtn = () => {
-		alert("Message Trigger");	
-	};
-
-	return <div id="mainBody">
-			<h1>{message}</h1>
-			<>{exampleComp()}</>
-			<input className="btn" type="button" value="Event Trigger" onClick={alertBtn}/>
-			<TaskList tasks={tasks} />
 		</div>;
 };
 
