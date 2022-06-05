@@ -9,6 +9,8 @@ import HookExample from "../../components/hooks/hookEffect";
 import ContextForm from "../../components/hooks/ContextForm";
 import HookContext from "../../components/hooks/hookContext";
 import HookRef from "../../components/hooks/hookRef";
+import HookMemo from "../../components/hooks/hookMemo";
+import HookCallback from "../../components/hooks/hookCallBack";
 
 const ReactPractice = () => {
 	
@@ -112,6 +114,19 @@ const ReactPractice = () => {
 				<h3>Ref Hook Example:</h3>
 				<HookRef text="Button Upgraded!"/>
 			</div>
+
+			<div className="container">
+				<h3>Memo Hook Example:</h3>
+       			<br />
+				<HookMemo />
+			</div>
+
+			<div className="container">
+				<h3>Callback Hook Example:</h3>
+				<br />
+				<HookCallback />
+			</div>
+
 
 		</div>;
 };

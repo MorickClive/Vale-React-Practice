@@ -33,7 +33,7 @@ Review commit tree here: [commit tree](https://github.com/MorickClive/Vale-React
     - [X] useContext
     - [X] useRef
     - [ ] useCallback
-    - [ ] useMemo
+    - [X] useMemo
 
 Task: Person CRUD
 Create a React page that allows a full-stack communication of data between React, Spring and an SQL-based database.
