@@ -1,53 +1,25 @@
-import { useContext, useEffect } from "react";
-import HookContext from "../../components/hooks/hookContext";
+import { useEffect, useState } from "react";
+import PersonList from "../../components/api/model/PersonList";
 
 const Register = () => {
+	document.title = "Vale-React-Project: Person Register";
 
 	useEffect(() => {
-		document.title = "Vale-React-Project: Person Register";
+		console.log("rendered: " + document.title);
 	}, []);
-	
-	const [context, setContext] = useContext(HookContext);
+
+	const [number, setNumber] = useState(0);
 
 	return <div id="main">
 		<div className="container">
 			<h2>Person Register page</h2>
 			<br />
-			<p>Context: [ {context} ]</p>
+			<PersonList />
 			<br />
-			<p>Example text</p>
+
+			<p>Separate State Object:</p>
+			<input type="number" value={number} onChange={(event)=>{setNumber(event.target.value)}}></input>
 			<br />
-			<p>Example text</p>
-			<br />
-			<p>Example text</p>
-			<br />
-			<p>Example text</p>
-			<br />
-			<p>Example text</p>
-			<br />
-			<p>Example text</p>
-			<br />
-			<p>Example text</p>
-			<br />
-			<p>Example text</p>
-			<br />
-			<p>Example text</p>
-			<br />
-			<p>Example text</p>
-			<br />
-			<p>Example text</p>
-			<br />
-			<p>Example text</p>
-			<br />
-			<p>Example text</p>
-			<br />
-			<p>Example text</p>
-			<br />
-			<p>Example text</p>
-			<br />
-			<p>Example text</p>
-			<br />
-			<p>Example text</p>
 		</div>
 	</div>
 };

@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 const Calculator = () => {
 	
+	document.title = "Vale-React-Project: Calculator";
 	useEffect(() => {	
-		document.title = "Vale-React-Project: Calculator";
+		console.log("rendered: " + document.title);
 	}, []);
 
 	const [displayValue, setDisplay] = useState('0');

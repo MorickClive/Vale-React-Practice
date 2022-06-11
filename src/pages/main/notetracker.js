@@ -2,9 +2,9 @@ import { useContext, useEffect } from "react";
 import HookContext from "../../components/hooks/hookContext";
 
 const NoteTracker = () => {
-	
-	useEffect(() => {	
-		document.title = "Vale-React-Project: NoteTracker";
+	document.title = "Vale-React-Project: NoteTracker";
+	useEffect(() => {
+		console.log("rendered: " + document.title);
 	}, []);
 
 	const [context, setContext] = useContext(HookContext);

@@ -1,7 +1,7 @@
 
 const ConsoleDisplay = ({messages}) => {
     return <>   
-    { messages.map( (msg) => { return <p key={msg.id}>{msg.msg}</p>} ) }
+    { messages.map( (msg) => { return <div key={msg.key}>{msg.msg}</div>} ) }
     </>
 }
 
