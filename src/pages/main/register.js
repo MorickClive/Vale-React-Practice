@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PersonList from "../../components/api/model/PersonList";
+import PersonList from "../../components/api/person/model/PersonList";
 
 const Register = () => {
 	document.title = "Vale-React-Project: Person Register";
