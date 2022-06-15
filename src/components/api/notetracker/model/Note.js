@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ListOptions from "../../ListOptions";
 
 const NoteCard = ({noteObj, onEdit, onDelete}) => {

@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ListOptions from "../../ListOptions";
+import OverlayMenu from "../../Overlay";
 import NoteCard from "./Note";
 import FormNote from "./ui/Form_Note";
 
@@ -11,12 +12,10 @@ const NoteGroup = ({groupObj, onDelete, onEdit}) => {
         setExpand(!expand);
     }
 
-    const displayList = (list) => { return list.map( (note) => {return <NoteCard key={note.id} noteObj={note} /> } ); };
-
     return <div key={groupObj.id} className="cardGroup" >
                 <h3>Label: {groupObj.label}</h3>
-                    <ListOptions onEdit={onEdit} onDelete={onDelete} />
-                    <input type="button" onClick={toggleExpand} value={!expand ? "expand" : "close"} />
+                    {!expand ? <ListOptions onEdit={onEdit} onDelete={onDelete} /> : <></>}
+                    <input type="button" onClick={toggleExpand} value={!expand ? "expand" : "close"} className="btn" />
                     <br />
                     {expand ? <NoteList list={groupObj.noteList} /> : ""}
             </div>;
@@ -24,17 +23,13 @@ const NoteGroup = ({groupObj, onDelete, onEdit}) => {
 
 
 const NoteList = ({list}) => {
-	const [noteList, setList] = useState([]);
+	const [noteList, setList] = useState(list);
 	const [idCount, setIDCount] = useState(0);
 	const [mode, setModes] = useState({
         "createMode" : false,
         "editMode" : false,
         "editTarget" : []
     });
-    
-    useEffect(() => {
-        setList(list);
-    },[])
 
     const onDelete = (id) => {
         setList(noteList.filter(group => group.id !== id));
@@ -61,15 +56,13 @@ const NoteList = ({list}) => {
     const toggleCreateMode = () => {
         setModes(prev => ({
             ...prev,
-            ["createMode"]: !mode.createMode
+            createMode: !mode.createMode
         }));
     };
 
     const toggleEditMode = (targ) => {
         setModes(prev => ({
-            ...prev,
-            ["editMode"]: !mode.editMode,
-            ["editTarget"]: targ           
+            ...prev, editMode: !mode.editMode, editTarget: targ           
         }));
     }
 
@@ -77,10 +70,13 @@ const NoteList = ({list}) => {
     const editForm = <FormNote onSubmit={onEdit} Action="Edit" />;
 
     return <>
-        {noteList.map( (note) => {return <NoteCard key={note.id} noteObj={note} onDelete={() => {onDelete(note.id)}} onEdit={() => {toggleEditMode(note)}} /> })}
-        <input type="button" value="add" onClick={toggleCreateMode}/>
-        {mode.createMode ? <></> : <></>} // TODO; I am here
-        {mode.editMode ? <></> : <></>}
+        {noteList.map( (note) => {return <>
+            <NoteCard key={note.id} noteObj={note} onDelete={() => {onDelete(note.id)}} onEdit={() => {toggleEditMode(note)}} /> 
+            {mode.createMode ? <OverlayMenu key={note.id} onClose={toggleCreateMode} child={createForm} /> : ""}
+            {mode.editMode ? <OverlayMenu key={note.id} onClose={() => {toggleEditMode(note)}} child={editForm} /> : ""}
+            </>
+        })}
+        <input type="button" value="Add" onClick={toggleCreateMode} className="createItem"/>
     </>;
 };
 

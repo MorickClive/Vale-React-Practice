@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import OverlayMenu from "../../Overlay";
-import PersonForm from "../../person/model/ui/PersonForm";
 import NoteGroup from "./NoteGroup";
 import FormNoteGroup from "./ui/Form_NoteGroup";
 
@@ -77,15 +76,15 @@ const NoteTrackerList = () => {
     const toggleCreateMode = () => {
         setModes(prev => ({
             ...prev,
-            ["createMode"]: !mode.createMode
+            createMode : !mode.createMode
         }));
     };
 
     const toggleEditMode = (targ) => {
         setModes(prev => ({
-            ...prev,
-            ["editMode"]: !mode.editMode,
-            ["editTarget"]: targ           
+            ...prev, 
+            editMode : !mode.editMode,
+            editTarget : targ           
         }));
     }
 
