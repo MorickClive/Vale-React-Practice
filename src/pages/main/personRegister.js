@@ -16,10 +16,6 @@ const Register = () => {
 			<br />
 			<PersonList />
 			<br />
-
-			<p>Separate State Object:</p>
-			<input type="number" value={number} onChange={(event)=>{setNumber(event.target.value)}}></input>
-			<br />
 		</div>
 	</div>
 };

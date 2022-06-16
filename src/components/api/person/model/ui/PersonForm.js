@@ -4,12 +4,12 @@ import { useState } from "react";
 const PersonForm = (props) => {
 	const [forename, setForename] = useState('');
 	const [surname, setSurname] = useState('');
-	const [age, setAge] = useState(18);
+	const [age, setAge] = useState(props.age !== "" ? props.age : 18);
 
     const resetForm = () => {
         setForename('');
         setSurname('');
-        setAge(18);
+        setAge(props.age !== "" ? props.age : 18);
     }
 
     const submit = (event) => {
@@ -44,12 +44,12 @@ const PersonForm = (props) => {
                     <tr>
                         <td />
                         <td><label>Forename:</label></td>
-                        <td><input type="text" value={forename} onChange={handleForename} placeholder="First name" required></input></td>
+                        <td><input type="text" value={forename} onChange={handleForename} placeholder={props.forename !== ""? props.forename : "First name"} required></input></td>
                     </tr>
                     <tr>
                         <td />
                         <td><label>Surname:</label></td>
-                        <td><input type="text" value={surname} onChange={handleSurname} placeholder="Last name" required/></td>
+                        <td><input type="text" value={surname} onChange={handleSurname} placeholder={props.surname !== "" ? props.surname : "Last name"} required/></td>
                     </tr>
                     <tr>
                         <td />
@@ -58,6 +58,7 @@ const PersonForm = (props) => {
                     </tr>
                     <tr>
                         <td><input type="submit" value="Submit" /></td>
+                        <td><input type="button" value="Cancel" onClick={() => {props.onCancel()}} /></td>
                     </tr>
                 </tbody>
             </table>
