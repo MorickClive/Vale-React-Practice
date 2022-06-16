@@ -37,11 +37,11 @@ Review commit tree here: [commit tree](https://github.com/MorickClive/Vale-React
 Task: Person CRUD
 Create a React page that allows a full-stack communication of data between React, Spring and an SQL-based database.
 
-- [ ] Person Register System
-  - [ ] CREATE
-  - [ ] READ/Display
-  - [ ] UPDATE/Edit
-  - [ ] DELETE
+- [X] Person Register System
+  - [X] CREATE
+  - [X] READ/Display
+  - [X] UPDATE/Edit
+  - [X] DELETE
 
 Task: NoteTracker CRUD
 
