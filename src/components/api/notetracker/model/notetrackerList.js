@@ -38,55 +38,46 @@ const data = [
     }
 ];
 
+const listMode = {
+    "createMode" : false,
+    "editMode" : false,
+    "editTarget" : []
+}
+
 const NoteTrackerList = () => {
 	const [noteGroup, setNoteGroup] = useState([]);
 	const [idCount, setIDCount] = useState(0 + data.length);
-	const [mode, setModes] = useState({
-        "createMode" : false,
-        "editMode" : false,
-        "editTarget" : []
-    });
+	const [mode, setModes] = useState(listMode);
 
     useEffect( () => {
         setNoteGroup(data);
     }, []);
 
-    const idIncrement = () => {
-        setIDCount(idCount + 1);
-    }
-
     const onCreate = (result) => {
         result.id = idCount;
-        idIncrement();
+        setIDCount(idCount + 1);
         setNoteGroup([...noteGroup, result]);
         toggleCreateMode();
-    }
+    };
     
     const onEdit = (updateObj) => {
         updateObj.id = mode.editTarget.id;
         updateObj.noteList = mode.editTarget.noteList;
         setNoteGroup(prev => prev.map(group => group.id === updateObj.id ? updateObj : group));
         toggleEditMode([]);
-    }
+    };
 
     const onDelete = (id) => {
         setNoteGroup(noteGroup.filter(group => group.id !== id));
-    }
+    };
 
     const toggleCreateMode = () => {
-        setModes(prev => ({
-            ...prev,
-            createMode : !mode.createMode
-        }));
+        setModes({createMode: !mode.createMode} );
     };
 
     const toggleEditMode = (targ) => {
-        setModes(prev => ({
-            ...prev, 
-            editMode : !mode.editMode,
-            editTarget : targ           
-        }));
-    }
+        setModes({editMode: !mode.editMode, editTarget: targ} );
+    };
 
     const createForm = <FormNoteGroup onSubmit={onCreate} Action="Create" />;
     const editForm = <FormNoteGroup onSubmit={onEdit} Action="Edit" />;
@@ -94,7 +85,7 @@ const NoteTrackerList = () => {
     return <>
         <div className="noteList">
             {noteGroup.map( (group) => {
-                return <NoteGroup key={group.id} groupObj={group} onDelete={() => {onDelete(group.id)}} onEdit={() => {toggleEditMode(group)}} /> }) 
+                return <NoteGroup key={group.id} groupObj={group} setter={setNoteGroup} onDelete={() => {onDelete(group.id)}} onEdit={() => {toggleEditMode(group)}} /> }) 
             }
         </div>
         <div>
