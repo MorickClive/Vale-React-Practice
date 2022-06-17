@@ -3,14 +3,16 @@ import Display from "../../components/console/ConsoleDisplay";
 import HookContext from "../../components/hooks/hookContext";
 
 const Console = () => {
-
+	document.title = "Vale-React-Project: Console";
+	
 	useEffect(() => {
-		document.title = "Vale-React-Project: Console";
+		console.log("rendered: " + document.title);
 	}, []);
+	// eslint-disable-next-line
 	const [context, setContext] = useContext(HookContext);
 
 	const [input, setInput] = useState('');
-	const [display, setDisplay] = useState( [ {id: 0, msg : <><p>Current Context: {context}</p><p>Hello World!</p></>} ] );
+	const [display, setDisplay] = useState( [ {id: 0, msg : <>Current Context: {context}<br />Hello World!</>} ] );
 	const displayRef = React.createRef();
 
 	// ========================================
@@ -26,9 +28,11 @@ const Console = () => {
 		commandList.set("/?, /help, /lscmd", "displays available commands.");
 
 		// Structures jsx to <h5>{key}</h5><div>{value}</div>
-		commandList.forEach((x, y) => { return msg = <>{msg}<h5>{y} </h5> <div style={{"paddingLeft" : "15px"}}>{x}</div></>});
+		commandList.forEach((x, y) => { return msg = <>
+			{msg} {y} <br /> - {x} <br />
+		</>});
 		// Appends jsx title with borders
-		msg = <><p>{"=".repeat(40)}</p> <h3>[CONSOLE: Command List]:</h3> <p>{"=".repeat(40)}</p>{msg}</>;
+		msg = <>{"=".repeat(40)}<br />[CONSOLE: Command List]:<br />{"=".repeat(40)}<br />{msg}</>;
 		
 		const list = [{id: display.length, msg: msg}];
 		addToDisplay(list);
@@ -60,7 +64,7 @@ const Console = () => {
 	}
 	
 	const clearConsole = () => {
-		setDisplay([]);
+		setDisplay([ {id: 0, msg : <>Current Context: {context}<br />Hello World!</>} ]);
 	}
 	
 	const clearInput = () => {

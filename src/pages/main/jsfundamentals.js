@@ -3,8 +3,9 @@ import HookContext from "../../components/hooks/hookContext";
 
 const JSBasic = () => {
 	
+	document.title = "Vale-React-Project: Fundamentals";
 	useEffect(() => {
-		document.title = "Vale-React-Project: Fundamentals";
+		console.log("rendered: " + document.title);
 	}, []);
 	
 	const [context, setContext] = useContext(HookContext);

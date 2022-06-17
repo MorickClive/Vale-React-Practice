@@ -5,8 +5,9 @@ import HookContext from "../../components/hooks/hookContext";
 
 const Home = () => {
 	
+	document.title = "Vale-React-Project";
 	useEffect(() => {
-		document.title = "Vale-React-Project";
+		console.log("rendered: " + document.title);
 	}, []);
 
 	const [value, setValue] = useContext(HookContext);

@@ -21,8 +21,6 @@ const Menu = () => {
 					<input type="button" className="item" value="Person Register" onClick={click}/></Link>
 				<Link to="/NoteTracker">
 					<input type="button" className="item" value="Note Tracker" onClick={click}/></Link>
-				<Link to="/Javascript-Basics">
-					<input type="button" className="item" value="JS Fundamentals" onClick={click}/></Link>
 				<Link to="/Console">
 					<input type="button" className="item" value="JS Console" onClick={click}/></Link>
 				<Link to="/Calculator">
