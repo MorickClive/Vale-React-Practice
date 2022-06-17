@@ -30,7 +30,6 @@ const dummyData = [
 
 const PersonList = () => {
 	const [people, setPeople] = useState([]);
-	const [idCount, setIDCount] = useState(0);
 	const [error, setError] = useState(true);
 	const [updateMessage, setUpdateMessage] = useState("Loading...");
 
@@ -54,7 +53,7 @@ const PersonList = () => {
           });
     }
 
-    const request = (action, method, object) => {
+    const request = async (action, method, object) => {
         fetch(baseUrl+action, {"method":method, headers: {"Content-Type" : "application/json"}, body : JSON.stringify(object)})
         .then(response => response.json())
         .then(json => {
@@ -63,10 +62,6 @@ const PersonList = () => {
         .catch(error => {
             alert("API " + method +" Request Failed!");
           });
-    }
-
-    const idIncrement = () => {
-        setIDCount(idCount + 1);
     }
 
     const onCreate = (result) => {

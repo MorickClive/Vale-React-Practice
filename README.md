@@ -45,11 +45,17 @@ Create a React page that allows a full-stack communication of data between React
 
 Task: NoteTracker CRUD
 
-- [ ] NoteTracker System
-  - [ ] CREATE
-  - [ ] READ/Display
-  - [ ] UPDATE/Edit
-  - [ ] DELETE
+- [X] NoteTracker System
+  - [X] NoteGroup
+    - [X] CREATE
+    - [X] READ/Display
+    - [X] UPDATE/Edit
+    - [X] DELETE
+  - [X] NOTE
+    - [X] CREATE
+    - [X] READ/Display
+    - [X] UPDATE/Edit
+    - [X] DELETE
  
  Task: Console & Calculator functionality
  - [X] Integrate Console

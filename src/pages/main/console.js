@@ -64,7 +64,7 @@ const Console = () => {
 	}
 	
 	const clearConsole = () => {
-		setDisplay([]);
+		setDisplay([ {id: 0, msg : <>Current Context: {context}<br />Hello World!</>} ]);
 	}
 	
 	const clearInput = () => {
