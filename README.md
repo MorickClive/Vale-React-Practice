@@ -6,6 +6,12 @@ The project will also use the SpringBoot Java-based framework to provide a hoste
 
 This project will also incorporate the elements provided in Vale-Javascript-Practice as a foundational state to build from, this will include the adaptation of JS code features such as the console and calculator examples.
 
+### Use Instructions
+
+This project has features that depend on a web API on address `localhost:8081`, the API can be hosted from the following repository:
+- [Spring REST Practice](https://github.com/MorickClive/Vale-SpringREST-Practice)
+
+
 Review commit tree here: [commit tree](https://github.com/MorickClive/Vale-React-Practice/network)
 
 ### Site Preview:
@@ -37,19 +43,25 @@ Review commit tree here: [commit tree](https://github.com/MorickClive/Vale-React
 Task: Person CRUD
 Create a React page that allows a full-stack communication of data between React, Spring and an SQL-based database.
 
-- [ ] Person Register System
-  - [ ] CREATE
-  - [ ] READ/Display
-  - [ ] UPDATE/Edit
-  - [ ] DELETE
+- [X] Person Register System
+  - [X] CREATE
+  - [X] READ/Display
+  - [X] UPDATE/Edit
+  - [X] DELETE
 
 Task: NoteTracker CRUD
 
-- [ ] NoteTracker System
-  - [ ] CREATE
-  - [ ] READ/Display
-  - [ ] UPDATE/Edit
-  - [ ] DELETE
+- [X] NoteTracker System
+  - [X] NoteGroup
+    - [X] CREATE
+    - [X] READ/Display
+    - [X] UPDATE/Edit
+    - [X] DELETE
+  - [X] NOTE
+    - [X] CREATE
+    - [X] READ/Display
+    - [X] UPDATE/Edit
+    - [X] DELETE
  
  Task: Console & Calculator functionality
  - [X] Integrate Console

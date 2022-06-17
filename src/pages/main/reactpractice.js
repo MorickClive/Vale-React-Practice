@@ -14,8 +14,9 @@ import HookCallback from "../../components/hooks/hookCallBack";
 
 const ReactPractice = () => {
 	
+	document.title = "Vale-React-Project: Examples";
 	useEffect(() => {
-		document.title = "Vale-React-Project: Examples";
+		console.log("rendered: " + document.title);
 
 		// React Render
 		renderExample();
@@ -27,28 +28,7 @@ const ReactPractice = () => {
 	const exampleComponent = exampleComp();
 
 	// List.key
-	// eslint-disable-next-line
-	const [tasks, setTaskList] = useState([
-		{
-			id: 0,
-			label: 'Example header',
-			message: 'Example message'
-		},
-		{
-			id: 1,
-			label: 'Example Item',
-			message: 'Example message'
-		},
-		{
-			id: 2,
-			label: 'Example Item',
-			message: 'Example message'
-		}
-	]);
-
-	const alertBtn = () => {
-		alert("Message Trigger");	
-	};
+	const [tasks, setTaskList] = useState(listData);
 
 	// Shared Context - review app.js to show provider.exposure.
 	const contextMessage = useContext(HookContext);
@@ -67,7 +47,7 @@ const ReactPractice = () => {
 			<div className="container">
 				<h3>Example Events:</h3>
 				<p>The button below has an event attached to its onClick listener!</p>
-				<input type="button" value="Event Trigger" onClick={alertBtn} className="btn"  />
+				<input type="button" value="Event Trigger" onClick={() => {alert("Message Trigger")} } className="btn"  />
 			</div>
 
 			<div className="container">
@@ -130,5 +110,23 @@ const ReactPractice = () => {
 
 		</div>;
 };
+
+const listData = [
+	{
+		id: 0,
+		label: 'Example header',
+		message: 'Example message'
+	},
+	{
+		id: 1,
+		label: 'Example Item',
+		message: 'Example message'
+	},
+	{
+		id: 2,
+		label: 'Example Item',
+		message: 'Example message'
+	}
+];
 
 export default ReactPractice;

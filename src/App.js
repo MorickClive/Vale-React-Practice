@@ -5,11 +5,11 @@ import Home from "./pages/main/home";
 import Console from "./pages/main/console";
 import Calculator from "./pages/main/calculator";
 import Error404 from "./pages/error/errorNotFound";
-import Register from "./pages/main/register";
 import JSBasic from "./pages/main/jsfundamentals";
 import NoteTracker from "./pages/main/notetracker";
 import ReactPractice from "./pages/main/reactpractice";
 import HookContext from "./components/hooks/hookContext";
+import Register from "./pages/main/personRegister";
 
 function App() {
   const [value, setValue] = useState("Example Context");
