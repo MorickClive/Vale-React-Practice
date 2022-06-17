@@ -6,6 +6,12 @@ The project will also use the SpringBoot Java-based framework to provide a hoste
 
 This project will also incorporate the elements provided in Vale-Javascript-Practice as a foundational state to build from, this will include the adaptation of JS code features such as the console and calculator examples.
 
+### Use Instructions
+
+This project has features that depend on a web API on address `localhost:8081`, the API can be hosted from the following repository:
+- [Spring REST Practice](https://github.com/MorickClive/Vale-SpringREST-Practice)
+
+
 Review commit tree here: [commit tree](https://github.com/MorickClive/Vale-React-Practice/network)
 
 ### Site Preview:
